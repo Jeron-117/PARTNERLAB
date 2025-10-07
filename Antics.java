@@ -12,7 +12,9 @@ public class Antics {
     }
 
     public static String capitalizeFirstLetter(String sentence){
-        return sentence;
+        char capitalized = Character.toUpperCase(sentence.charAt(0));
+        String capitalizeFirstLetter = capitalized + sentence.substring(1);
+        return capitalizeFirstLetter;
     }
 
 }
