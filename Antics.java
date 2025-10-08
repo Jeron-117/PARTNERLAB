@@ -3,9 +3,11 @@
  * Description: This class has 4 string methods.
  * 1 isPalindrome: checks if a word or sentence reads the same backward.
  * 2 isAbecedarian: checks if the letters are in alphabetical order.
+ * 3 isPangram: checks if a sentence or phrase contains all letters of the alphabet.
+ * 4 capitalizeFirstLetter: capitalizes the first letter of the word, sentence, phrase, etc.
  *
- * @author Edisson Ajciginac
- * @author Jeron Montecillo
+ * @author Edisson Ajciginac (isPalindrome and isAbecedarian)
+ * @author Jeron Montecillo (isPangram and capitalizeFirstLetter)
  * @since 2025-10-7
  */
 public class Antics {
@@ -79,10 +81,18 @@ public class Antics {
         return prev != 0;
     }
 
+    /**
+     * Tests if phrase/sentence contains all letters of the alphabet.
+     * @param sentence
+     * @return true if the phrase/sentence contains all letters of the alphabet otherwise returns false
+     */
     public static boolean isPangram(String sentence){
         sentence = sentence.toLowerCase();
         boolean[] pangram = new boolean[26];
         int index = 0;
+        if (sentence.length() < 26) {
+            return false;
+        } else {
             for (int i = 0; i < sentence.length(); i++) {
                 char alphabet = sentence.charAt(i);
 
@@ -105,9 +115,15 @@ public class Antics {
             } else {
                 return false;
             }
+        }
 
     }
 
+    /**
+     * Capitalizes the first letter in the sentence/phrase.
+     * @param sentence
+     * @return uppercase for the first letter
+     */
     public static String capitalizeFirstLetter(String sentence){
         char capitalized = Character.toUpperCase(sentence.charAt(0));
         String capitalizeFirstLetter = capitalized + sentence.substring(1);
