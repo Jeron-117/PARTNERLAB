@@ -37,7 +37,7 @@ public class Conversion {
     * @param amountGTQ amount in Quetzales
     * @return amount in US Dollars
     */
-   public static double Quetzal2Dollar(double amountGTQ) {
+   public static double quetzal2Dollar(double amountGTQ) {
       return amountGTQ * 0.1306;
    }
 
@@ -46,7 +46,7 @@ public class Conversion {
     * @param amountUSD amount in US Dollars
     * @return amount in Quetzales
     */
-   public static double Dollar2Quetzal(double sc) {
+   public static double dollar2Quetzal(double sc) {
       return sc * 7.656967840735069;
    }
 
@@ -55,7 +55,7 @@ public class Conversion {
     * @param amountPHP amount in PHP
     * @return amount in USD
     */
-   public static double PHP2USD(double amountPHP) {
+   public static double php2Usd(double amountPHP) {
       return amountPHP * 0.017560471;
    }
 
@@ -64,7 +64,7 @@ public class Conversion {
     * @param amountUSD amount in USD
     * @return amount in PHP
     */
-   public static double USD2PHP(double amountUSD) {
+   public static double usd2Php(double amountUSD) {
       return amountUSD * 56.946082;
    }
 
@@ -80,19 +80,19 @@ public class Conversion {
       double convert;
       switch (choice) {
          case 1:
-            convert = Quetzal2Dollar(value);
+            convert = quetzal2Dollar(value);
             System.out.printf("Q%.2f = $%.2f%n", value, convert); // 2 decimales
             break;
          case 2:
-            convert = Dollar2Quetzal(value);
+            convert = dollar2Quetzal(value);
             System.out.printf("$%.2f = Q%.2f%n", value, convert); // 2 decimales
             break;
          case 3:
-            convert = PHP2USD(value);
+            convert = php2Usd(value);
             System.out.printf("%.2f PHP = %.2f USD%n", value, convert);
             break;
          case 4:
-            convert = USD2PHP(value);
+            convert = usd2Php(value);
             System.out.printf("%.2f USD = %.2f PHP%n", value, convert);
             break;
          default:
