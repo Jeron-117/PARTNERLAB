@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+/**
+ * DESCRIPTION:
+ * @author JERON MONTECILLO (GUESSING GAME)
+ * @author JOEL ODESSKY (ROCK-PAPER-SCISSORS)
+ * @since 10/21/2025
+ */
+public class RandomEvent {
+
+    /**
+     * Shows the menu and makes appropriate call to function method. 
+     * @param command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char response;
+
+        do {
+            System.out.println("=== Currency Conversion Menu ===");
+            System.out.println("1) GUESSING GAME");
+            System.out.println("2) ROCK-PAPER-SCISSORS");
+            System.out.print("CHOOSE AN OPTION (1-2): ");
+            int choice = sc.nextInt();
+
+
+            if (choice == 1 || choice == 2) {
+                System.out.print("Enter a number: ");
+            }
+            else {
+                do {
+                System.out.print("Invalid option.\nPlease enter a number that corresponds with your desired game (1-2): ");
+                choice = sc.nextInt();
+                }
+                while (choice != 1 && choice != 2);
+                System.out.print("Now enter a number: ");
+            } double value = sc.nextDouble();
+
+
+            switch (choice) {
+            case 1:
+                System.out.print(GuessingGame.JeronMontecillo(x)); // 2 decimals
+                break;
+            case 2:
+                System.out.print(RockPaperScissors.JoelOdessky(y)); // 2 decimals
+                break;
+            default:
+                System.out.println("Invalid input.");
+            }
+
+
+            System.out.print("Enter 'Y' to start another game: ");
+            response = sc.next().charAt(0);
+        }
+        while (response == 'Y');
+
+        if (response != 'Y') {
+            System.out.println("Leaving so soon... ");
+        }
+
+        sc.close();
+   }
+
+}
