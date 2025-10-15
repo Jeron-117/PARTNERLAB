@@ -1,0 +1,5 @@
+public static class RockPaperScissors {
+    public static boolean JoelOdessky(String y) {
+        return y;
+    }
+}
