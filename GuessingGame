@@ -1,0 +1,5 @@
+public class GuessingGame {
+    public static boolean JeronMontecillo(String x) {
+        return x;
+    }
+}
