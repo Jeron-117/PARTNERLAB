@@ -1,4 +1,4 @@
-public static class RockPaperScissors {
+public class RockPaperScissors {
     public static boolean JoelOdessky(String y) {
         return y;
     }
